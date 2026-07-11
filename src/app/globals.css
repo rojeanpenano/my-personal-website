@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* ── Color: the control-room palette ─────────────────── */
+  --color-canvas: #0b0d10;      /* page background */
+  --color-surface: #12151a;     /* elevated panels, cards */
+  --color-ink: #e8eaed;         /* primary text */
+  --color-ink-muted: #8b929c;   /* secondary text */
+  --color-hairline: #1e2329;    /* borders, schematic strokes */
+  --color-accent: #3fbf77;      /* system green — use sparingly */
+
+  /* ── Typography: three voices, strict roles ──────────── */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "Cascadia Code", monospace;
+
+  /* ── Spacing: section rhythm ─────────────────────────── */
+  --spacing-section: 8rem;      /* 128px — desktop section padding */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ── Base document behavior ──────────────────────────────── */
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-canvas);
 }
