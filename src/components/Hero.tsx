@@ -13,7 +13,7 @@ export default function Hero() {
         </p>
 
         <h1 className="mt-6 text-5xl font-semibold tracking-tight text-ink sm:text-7xl">
-          Rojean Peñano
+          ROJEAN PEÑANO
         </h1>
 
         <p className="mt-4 text-lg text-ink-muted sm:text-xl">
