@@ -1,4 +1,5 @@
 import RiceUpSchematic from "@/components/RiceUpSchematic";
+import Reveal from "@/components/Reveal";
 
 const DISEASE_CLASSES = [
   "Bacterial Leaf Blight",
@@ -99,7 +100,9 @@ export default function RiceUpCaseStudy() {
           System architecture
         </h4>
         <div className="mt-6 rounded border border-hairline p-6">
-          <RiceUpSchematic />
+          <Reveal>
+            <RiceUpSchematic />
+          </Reveal>
         </div>
       </div>
 

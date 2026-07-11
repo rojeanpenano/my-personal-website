@@ -92,3 +92,14 @@ body {
     transform: none;
   }
 }
+
+/* ── Scroll-gated animation ──────────────────────────────── */
+[data-animate-onview] .animate-line-draw,
+[data-animate-onview] .animate-fade-settle {
+  animation-play-state: paused;
+}
+
+[data-animate-onview][data-inview] .animate-line-draw,
+[data-animate-onview][data-inview] .animate-fade-settle {
+  animation-play-state: running;
+}
