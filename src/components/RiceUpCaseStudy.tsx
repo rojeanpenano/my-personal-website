@@ -190,9 +190,11 @@ export default function RiceUpCaseStudy() {
         </dl>
         <p className="mt-8 max-w-2xl text-sm leading-relaxed text-ink-muted">
           My role: backend architecture, database design, and cloud
-          implementation; building and integrating the VGG16 disease model
+          implementation; building the VGG16 disease model and integrating it
           into the Flask REST API; and developing the price regression module,
-          AskJuan, and the farming calendar — in a three-person thesis team.
+          AskJuan, and the farming calendar — while my teammates led field
+          research and dataset curation, from farmer interviews to the AskJuan
+          knowledge base.
         </p>
       </div>
 

@@ -3,12 +3,42 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import RiceUpCaseStudy from "@/components/RiceUpCaseStudy";
+import ProjectCard, { type Project } from "@/components/ProjectCard";
 
 const SECTIONS = [
   { id: "experience", title: "Experience" },
   { id: "skills", title: "Skills" },
   { id: "recognition", title: "Recognition" },
   { id: "contact", title: "Contact" },
+] as const;
+
+const PROJECTS: readonly Project[] = [
+  {
+    kicker: "Internship · Hacktiv Colab Inc. · 2025",
+    title: "Inventory Management API",
+    description:
+      "Cloud-based inventory backend built during my internship: five domain modules (items, categories, suppliers, transactions, image uploads) as independent Flask blueprints with Pydantic request validation, deployed serverless on Azure Functions with Cosmos DB and Blob Storage.",
+    stack: ["Python", "Flask", "Pydantic", "Azure Functions", "Cosmos DB", "Blob Storage"],
+    links: [
+      {
+        label: "view repository",
+        href: "https://github.com/rojeanpenano/python-flask-inventory-api",
+      },
+    ],
+  },
+  {
+    kicker: "Course Project · Software Engineering · 2024",
+    title: "XPENDITURE",
+    description:
+      "Expense management platform where I owned the backend: REST APIs for budgets, expense tracking, group budgeting, and transactions, with JWT authentication, middleware-based input validation, and endpoints verified through Postman.",
+    stack: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT"],
+    links: [
+      {
+        label: "view repository",
+        href: "https://github.com/rojeanpenano/xpenditure",
+      },
+    ],
+  },
 ] as const;
 
 export default function Home() {
@@ -31,6 +61,11 @@ export default function Home() {
           </h2>
           <div className="mt-10">
             <RiceUpCaseStudy />
+          </div>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            {PROJECTS.map((project) => (
+              <ProjectCard key={project.title} project={project} />
+            ))}
           </div>
         </section>
         {SECTIONS.map((section) => (
