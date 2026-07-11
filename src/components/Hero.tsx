@@ -17,7 +17,7 @@ export default function Hero() {
         </h1>
 
         <p className="mt-4 text-lg text-ink-muted sm:text-xl">
-          Aspiring AI/ML or Software Engineer — Backend &amp; Intelligent Systems
+          Software Engineer — Backend &amp; Intelligent Systems
         </p>
 
         <p className="mt-8 max-w-md text-sm leading-relaxed text-ink-muted">

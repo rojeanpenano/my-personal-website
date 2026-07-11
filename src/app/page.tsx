@@ -1,9 +1,9 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 
 const SECTIONS = [
-  { id: "about", title: "About" },
   { id: "projects", title: "Projects" },
   { id: "experience", title: "Experience" },
   { id: "skills", title: "Skills" },
@@ -17,7 +17,14 @@ export default function Home() {
       <Nav />
       <main id="top">
         <Hero />
-
+        <section id="about" className="mx-auto max-w-6xl scroll-mt-14 px-6 py-32">
+          <h2 className="font-mono text-sm tracking-widest text-accent uppercase">
+            About
+          </h2>
+          <div className="mt-10">
+            <About />
+          </div>
+        </section>
         {SECTIONS.map((section) => (
           <section
             key={section.id}
