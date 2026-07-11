@@ -4,9 +4,10 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import RiceUpCaseStudy from "@/components/RiceUpCaseStudy";
 import ProjectCard, { type Project } from "@/components/ProjectCard";
+import Experience from "@/components/Experience";
+import Reveal from "@/components/Reveal";
 
 const SECTIONS = [
-  { id: "experience", title: "Experience" },
   { id: "skills", title: "Skills" },
   { id: "recognition", title: "Recognition" },
   { id: "contact", title: "Contact" },
@@ -66,6 +67,16 @@ export default function Home() {
             {PROJECTS.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
+          </div>
+        </section>
+        <section id="experience" className="mx-auto max-w-6xl scroll-mt-14 px-6 py-32">
+          <h2 className="font-mono text-sm tracking-widest text-accent uppercase">
+            Experience
+          </h2>
+          <div className="mt-10">
+            <Reveal>
+              <Experience />
+            </Reveal>
           </div>
         </section>
         {SECTIONS.map((section) => (
