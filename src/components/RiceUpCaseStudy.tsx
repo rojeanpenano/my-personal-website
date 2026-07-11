@@ -1,3 +1,5 @@
+import RiceUpSchematic from "@/components/RiceUpSchematic";
+
 const DISEASE_CLASSES = [
   "Bacterial Leaf Blight",
   "Brown Spot",
@@ -91,11 +93,14 @@ export default function RiceUpCaseStudy() {
         </p>
       </div>
 
-      {/* ── Architecture schematic — built in 5.2 ── */}
-      <div className="mt-12 flex min-h-64 items-center justify-center rounded border border-dashed border-hairline">
-        <p className="font-mono text-xs tracking-widest text-ink-muted uppercase">
-          schematic: pending
-        </p>
+      {/* ── Architecture schematic ── */}
+      <div className="mt-12">
+        <h4 className="font-mono text-xs tracking-widest text-accent uppercase">
+          System architecture
+        </h4>
+        <div className="mt-6 rounded border border-hairline p-6">
+          <RiceUpSchematic />
+        </div>
       </div>
 
       {/* ── Core feature: disease detection ── */}

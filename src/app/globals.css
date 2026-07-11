@@ -69,3 +69,26 @@ body {
     stroke-dashoffset: 0;
   }
 }
+
+@keyframes fade-settle {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-fade-settle {
+  animation: fade-settle 0.4s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-settle {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
