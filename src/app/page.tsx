@@ -1,11 +1,44 @@
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+
+const SECTIONS = [
+  { id: "about", title: "About" },
+  { id: "projects", title: "Projects" },
+  { id: "experience", title: "Experience" },
+  { id: "skills", title: "Skills" },
+  { id: "recognition", title: "Recognition" },
+  { id: "contact", title: "Contact" },
+] as const;
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-4">
-      <p className="font-mono text-sm tracking-widest text-ink-muted uppercase">
-        system: online
-      </p>
-      <h1 className="text-4xl font-semibold text-ink">Rojean Peñano</h1>
-      <p className="text-accent">Design tokens operational.</p>
-    </main>
+    <>
+      <Nav />
+      <main id="top">
+        {/* Hero — built in Task 3 */}
+        <section
+          aria-label="Introduction"
+          className="flex min-h-screen items-center justify-center"
+        >
+          <p className="font-mono text-sm tracking-widest text-ink-muted uppercase">
+            hero: pending
+          </p>
+        </section>
+
+        {SECTIONS.map((section) => (
+          <section
+            key={section.id}
+            id={section.id}
+            className="mx-auto max-w-6xl scroll-mt-14 px-6 py-32"
+          >
+            <h2 className="font-mono text-sm tracking-widest text-accent uppercase">
+              {section.title}
+            </h2>
+            <p className="mt-4 text-ink-muted">Module pending.</p>
+          </section>
+        ))}
+      </main>
+      <Footer />
+    </>
   );
 }
