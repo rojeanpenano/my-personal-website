@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rojean Peñano — AI & Software Engineer",
+  title: "Rojean Peñano — Portfolio",
   description:
-    "AI & Software Engineer specializing in backend development and intelligent systems. Python, machine learning, and cloud architecture.",
+    "Software Engineer specializing in backend development.",
 };
 
 export default function RootLayout({
