@@ -1,3 +1,5 @@
+import SkillChips from "@/components/SkillsChips";
+
 export type Project = {
   kicker: string;
   title: string;
@@ -17,16 +19,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         {project.description}
       </p>
 
-      <ul className="mt-6 flex flex-wrap gap-2">
-        {project.stack.map((tech) => (
-          <li
-            key={tech}
-            className="rounded border border-hairline px-3 py-1 font-mono text-xs text-ink-muted"
-          >
-            {tech}
-          </li>
-        ))}
-      </ul>
+      <SkillChips skills={project.stack} />
 
       <div className="mt-6 flex flex-wrap items-center gap-6 pt-2">
         {project.links.map((link) => (
