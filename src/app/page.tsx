@@ -6,9 +6,9 @@ import RiceUpCaseStudy from "@/components/RiceUpCaseStudy";
 import ProjectCard, { type Project } from "@/components/ProjectCard";
 import Experience from "@/components/Experience";
 import Reveal from "@/components/Reveal";
+import Skills from "@/components/Skills";
 
 const SECTIONS = [
-  { id: "skills", title: "Skills" },
   { id: "recognition", title: "Recognition" },
   { id: "contact", title: "Contact" },
 ] as const;
@@ -76,6 +76,16 @@ export default function Home() {
           <div className="mt-10">
             <Reveal>
               <Experience />
+            </Reveal>
+          </div>
+        </section>
+        <section id="skills" className="mx-auto max-w-6xl scroll-mt-14 px-6 py-32">
+          <h2 className="font-mono text-sm tracking-widest text-accent uppercase">
+            Skills
+          </h2>
+          <div className="mt-10">
+            <Reveal>
+              <Skills />
             </Reveal>
           </div>
         </section>
