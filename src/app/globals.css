@@ -39,3 +39,33 @@ body {
   background-color: var(--color-accent);
   color: var(--color-canvas);
 }
+
+/* ── Schematic primitives ────────────────────────────────── */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, var(--color-hairline) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-hairline) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+}
+
+@keyframes line-draw {
+  from {
+    stroke-dashoffset: var(--line-length, 100);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-line-draw {
+  stroke-dasharray: var(--line-length, 100);
+  animation: line-draw 1.2s ease-out 0.6s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-line-draw {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}

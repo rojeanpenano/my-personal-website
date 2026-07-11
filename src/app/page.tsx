@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 
 const SECTIONS = [
   { id: "about", title: "About" },
@@ -15,15 +16,7 @@ export default function Home() {
     <>
       <Nav />
       <main id="top">
-        {/* Hero — built in Task 3 */}
-        <section
-          aria-label="Introduction"
-          className="flex min-h-screen items-center justify-center"
-        >
-          <p className="font-mono text-sm tracking-widest text-ink-muted uppercase">
-            hero: pending
-          </p>
-        </section>
+        <Hero />
 
         {SECTIONS.map((section) => (
           <section
